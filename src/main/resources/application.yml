@@ -1,0 +1,31 @@
+# Database Settings
+spring:
+  datasource:
+    #    url: jdbc:h2:mem:example-app;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    #    url: jdbc:h2:mem:testdb
+    #    url: jdbc:h2:tcp://localhost:9090/~/testdb
+#    url: jdbc:h2:tcp://localhost/mem:testdb
+#    url: jdbc:h2:tcp://http://172.29.29.160:8082/mem:testdb
+    url: jdbc:h2:tcp://localhost/~/test;MODE=Oracle
+    driverClassName: org.h2.Driver
+    platform: h2
+    username: sa
+    password:
+
+  # H2 Settings
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: false
+        web-allow-others: false
+
+  # logging
+  logging:
+    level:
+      root: DEBUG
+      org.springframework.web: DEBUG
+      guru.springframework.controllers: DEBUG
+      org.hibernate: DEBUG
+
